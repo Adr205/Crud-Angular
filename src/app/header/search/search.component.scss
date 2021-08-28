@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../../../assets/Poppins-Bold.otf);
+}
+
+.search {
+  margin-top: 2rem;
+  margin-left: 5rem;
+  display: flex;
+  justify-content: space-between;
+  .usuarios {
+    display: flex;
+    h2 {
+      font-family: "Poppins-Bold";
+    }
+    img {
+      width: 3rem;
+      margin-right: 2rem;
+    }
+  }
+
+  .search-bar {
+    padding: 5px;
+    font-size: 17px;
+    border: 1px solid grey;
+    width: 30%;
+
+    align-items: center;
+    margin-right: 15rem;
+    .icon-search {
+        background-image: url(../../../assets/SVG/icono_buscar.svg);
+    }
+    input {
+      width: 90%;
+    }
+
+    button {
+      padding: 10px;
+      cursor: pointer;
+      border: none;
+      img {
+        width: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+<div *ngFor="let tag of tags" class="card">
+    <div class="header">
+        <p class="usrname">{{tag.firstName}} {{tag.lastName}}</p>
+        <button (click)="open(content, 'Editar Usuario', tag.id)">
+            <img src="../../assets/SVG/icono_editar.svg" alt="Editar" />
+        </button>
+    </div>
+    <div class="footer">
+        <div class="usr">
+            <img *ngIf="tag?.gender == 'f' " src="../../assets/SVG/icono_mujer.svg" alt="Nombre" />
+            <img *ngIf="tag?.gender == 'm' " src="../../assets/SVG/icono_hombre.svg" alt="Nombre" />
+            <div class="usr-info">
+                <p>{{tag.location}}</p>
+                <p>{{tag.phone}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">{{type}}</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <label for="firstname">Nombre</label>
+                <div class="input-group">
+                    <input id="firstname" class="form-control" >
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Apellido</label>
+                <div class="input-group">
+                    <input id="lastname" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="ubicacion">Ubicacion</label>
+                <div class="input-group">
+                    <input id="ubicacion" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="celular">Celular</label>
+                <div class="input-group">
+                    <input id="celular" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="radio" id="hombre" name="genero" value="m">
+                    <label for="hombre">Hombre</label><br>
+                    <input type="radio" id="mujer" name="genero" value="f">
+                    <label for="mujer">Mujer</label><br>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Cancel click')">Cancelar</button>
+    </div>
+</ng-template>
