@@ -40,7 +40,7 @@
     }
   }
   @media (max-width: 768px) {
-    button{
+    button {
       margin-right: 2rem;
     }
   }
@@ -136,7 +136,7 @@ body {
     }
   }
   @media (max-width: 768px) {
-    .searchb{
+    .searchb {
       margin-top: 2rem;
     }
   }
@@ -149,6 +149,82 @@ body {
   ::placeholder {
     color: black;
   }
+}
+
+
+.modal-header {
+    height: 6rem;
+    justify-content: center;
+    .close{
+      background: none;
+      color: #417ef0;
+      margin-left: 2rem;
+    }
+  }
+
+.form-group{
+  label{
+    font-size: 0.7rem;
+    font-family: "Poppins-Bold";
+  }
+}
+
+.input-group-r{
+  display: flex;
+  
+  .rH{
+    margin-right: 2rem;
+  }
+
+  label{
+    font-size: 0.7rem;
+    font-family: "Poppins-Bold";
+  }
+}
+
+.foot{
+  display: block;
+  text-align: center;
+}
+
+.but{
+  width: 10rem;
+  margin-top: 1rem;
+}
+
+.but:last-child{
+  margin-bottom: 2rem;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 2rem;
+    .input-group{
+      input{
+        border-radius: 1rem;
+        background-color: #eee;
+      }
+    }
+  }
+.cancel{
+  color: #417ef0;
+  text-decoration: underline;
+}
+.cancel:hover{
+  background-color: #ddd;
+}
+
+.adder{
+   background-color: #417ef0;
+   color: white;
+   font-family: "Poppins-Bold";
+}
+.adder:hover{
+  background-color: white;
+  color: #417ef0;
 }
 
 // @media (min-width: 768px) {

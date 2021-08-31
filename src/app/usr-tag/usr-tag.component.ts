@@ -1,4 +1,5 @@
 import {HttpClient} from "@angular/common/http";
+import {isGeneratedFile} from "@angular/compiler/src/aot/util";
 import {Component, OnInit, ViewEncapsulation} from "@angular/core";
 import {ModalDismissReasons, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {FileWatcherEventKind} from "typescript";
@@ -176,8 +177,7 @@ export class UsrTagComponent implements OnInit {
     if (filterText == "") {
       this.tags = this.tagsSave;
     } else {
-      let filterTags = this.tagsSave.filter(
-        (t) =>
+      let filterTags = this.tagsSave.filter((t) => 
           t.firstName.toLowerCase().indexOf(filterText) != -1 ||
           t.lastName.toLowerCase().indexOf(filterText) != -1 ||
           t.location.toLowerCase().indexOf(filterText) != -1 ||
@@ -199,7 +199,6 @@ export class UsrTagComponent implements OnInit {
     //     this.filteredTags.push(t);
     //   }
     // });
-    
   }
 
   open(content: any, type: string, id: number) {
