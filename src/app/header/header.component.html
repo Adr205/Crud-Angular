@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="header">
     <h1>Ejercicio CMS</h1>
     <button (click)="open(content, 'Agregar Usuario')">
@@ -14,13 +15,12 @@
             <h2>Usuarios</h2>
         </div>
     
-        <div class="search-bar">
+        <div class="searchb">
             <form action="">
-                <input (input)="usr.filter()" id="searchText"type="text">
                 <!-- <i class="icon-search"></i> -->
-                
-                <button (click)="usr.filter()">
-                    <img class="icon-search" src="../../../assets/SVG/icono_buscar.svg" alt="">
+                <input (input)="usr.filter()" placeholder="Buscador" id="searchText"type="text" class="text">
+                <button class="btn" (click)="usr.filter()">
+                    <i class="fa fa-search "></i>
                 </button>
             </form>
         </div>
