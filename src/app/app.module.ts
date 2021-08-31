@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormComponent } from './header/form/form.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { Router, RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule,
     NgbModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,58 +1,209 @@
 @font-face {
-    font-family: 'Poppins-Bold';
-    src: url(../../assets/Poppins-Bold.otf);
+  font-family: "Poppins-Bold";
+  src: url(../../assets/Poppins-Bold.otf);
 }
 
-.header{
-    background-color: #417ef0;
-    height: 6rem;
+.header {
+  background-color: #417ef0;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    margin-left: 5rem;
+    font-family: "Poppins-Bold";
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  button {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    border-radius: 10px;
+    border-color: none;
 
-    h1{
-        margin-left: 5rem;
-        font-family: 'Poppins-Bold';
-        color: white;
-        font-size: 1.5rem;
+    background-color: white;
+    font-family: "Poppins-Bold";
+    font-size: 0.9rem;
+    color: #417ef0;
+    width: 12rem;
+    height: 3rem;
+    margin-right: 15rem;
+
+    p {
+      margin-left: 0.5rem;
     }
 
-    button{
-        display: flex;
-        align-items: center;
-        border-radius: 10px;
-        border-color: none;
-        
-
-        background-color: white;
-        font-family: 'Poppins-Bold';
-        font-size: .9rem;
-        color: #417ef0;
-        width: 12rem;
-        height: 3rem;
-        margin-right: 15rem;
-
-        p{
-            margin-left: 0.5rem;
-        }
-
-        img{
-            margin-left: 1rem;
-            width: 1rem;
-        }
+    img {
+      margin-left: 1rem;
+      width: 1rem;
     }
+  }
 }
 
-.card-container{
-    display: grid;
+.card-container {
+  display: grid;
+  margin-left: 9rem;
+  margin-right: 9rem;
+  grid-template-columns: repeat(1, 1fr);
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
     margin-left: 4rem;
-    margin-right: 9rem;
-    grid-template-columns: repeat(4,1fr);
+    margin-right: 4rem;
+  }
+  
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+  
+  @media (min-width: 1400px) {
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 4rem;
+    margin-right: 10.4rem;
+  }
 }
 
-body{
-    background-color: #f2f2f2;
-    height: 100%;
-    padding-bottom: 5rem;
-    padding-top: 1rem;
+body {
+  background-color: #f2f2f2;
+  height: 100%;
+  padding-bottom: 5rem;
+  padding-top: 1rem;
 }
+
+
+.search {
+  margin-top: 2rem;
+  margin-left: 5rem;
+  display: flex;
+  justify-content: space-between;
+  .usuarios {
+    display: flex;
+    align-items: center;
+    h2 {
+      font-family: "Poppins-Bold";
+    }
+    img {
+      width: 3rem;
+      margin-right: 2rem;
+    }
+  }
+
+  .search-bar {
+    padding: 5px;
+    font-size: 17px;
+    border: 1px solid grey;
+    width: 30%;
+
+    align-items: center;
+    margin-right: 15rem;
+    .icon-search {
+        background-image: url(../../assets/SVG/icono_buscar.svg);
+    }
+    input {
+      width: 90%;
+    }
+
+    button {
+      padding: 10px;
+      cursor: pointer;
+      border: none;
+      img {
+        width: 1rem;
+      }
+    }
+
+
+    a{
+      text-decoration: none;
+      }
+      .search{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 40px;
+      border-radius: 40px;
+      padding: 10px;
+      transform: translate(-50%,-50%);
+      background: #2f3640;
+      }
+      .btn{
+      border-radius:50%;
+      background: #2f3640;
+      color: #2471A3;
+      float: right;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+      .text{
+      border:none;
+      background: none;
+      outline: none;
+      float: left;
+      padding:0;
+      color: #fff;
+      font-size:16px;
+      transition: 0.6s;
+      line-height: 40px;
+      width: 0px;
+      }
+      ::placeholder{
+      padding-left:15px;
+      color: #ddd;
+      }
+      .search:hover> .text{
+      width: 350px;
+      padding: 0 5px;
+      transition: 0.4s;
+      }
+      @media(max-width: 841px){
+      .search:hover> .text{
+      width: 300px;
+      }
+      }
+      @media(max-width: 740px){
+      .search:hover> .text{
+      width: 250px;
+      }
+      }
+      @media(max-width: 640px){
+      .search:hover> .text{
+      width: 200px;
+      }
+      }
+      @media(max-width: 540px){
+      .search:hover> .text{
+      width: 160px;
+      }
+      .text{
+      line-height: 30px;
+      }
+      .search{
+      height: 30px;
+      }
+      .btn{
+      width: 30px;
+      height: 30px;
+      }
+      }
+      @media(max-width: 461px){
+      .search:hover> .text{
+      width: 140px;
+      }
+      }
+      @media(max-width: 401px){
+      .search:hover> .text{
+      width: 110px;
+      }
+      }
+
+  }
+}
+
+

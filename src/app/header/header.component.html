@@ -1,12 +1,81 @@
 <div class="header">
     <h1>Ejercicio CMS</h1>
-    <button>
+    <button (click)="open(content, 'Agregar Usuario')">
         <p>Agregar Usuario</p>
         <img src="../../assets/SVG/icono_agregar.svg" alt="Agregar Usuario">
     </button>
 </div>
 
 <body>
-    <app-search></app-search>
-    <app-usr-tag class="card-container"></app-usr-tag>
+    <!-- <app-search ></app-search> -->
+    <div class="search">
+        <div class="usuarios">
+            <img src="../../../assets/SVG/icono_usuarios.svg" alt="Usuarios">
+            <h2>Usuarios</h2>
+        </div>
+    
+        <div class="search-bar">
+            <form action="">
+                <input (input)="usr.filter()" id="searchText"type="text">
+                <!-- <i class="icon-search"></i> -->
+                
+                <button (click)="usr.filter()">
+                    <img class="icon-search" src="../../../assets/SVG/icono_buscar.svg" alt="">
+                </button>
+            </form>
+        </div>
+    </div>
+    <app-usr-tag #usr class="card-container"></app-usr-tag>
 </body>
+
+
+
+<!-- Modal -->
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">{{type}}</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <label for="firstname">Nombre</label>
+                <div class="input-group">
+                    <input id="firstname" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Apellido</label>
+                <div class="input-group">
+                    <input id="lastname" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="ubicacion">Ubicacion</label>
+                <div class="input-group">
+                    <input id="ubicacion" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="celular">Celular</label>
+                <div class="input-group">
+                    <input id="celular" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="radio" id="hombre" name="genero" value="m">
+                    <label for="hombre">Hombre</label><br>
+                    <input type="radio" id="mujer" name="genero" value="f">
+                    <label for="mujer">Mujer</label><br>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="addUser()" (click)="usr.getUserTags2(1000)" >Agregar</button>
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Cancel click')">Cancelar</button>
+    </div>
+</ng-template>
