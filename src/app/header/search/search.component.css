@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../../../assets/Poppins-Bold.otf);
+}
+
+.search {
+  margin-top: 2rem;
+  margin-left: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.search .usuarios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search .usuarios h2 {
+  font-family: "Poppins-Bold";
+}
+
+.search .usuarios img {
+  width: 3rem;
+  margin-right: 2rem;
+}
+
+.search .search-bar {
+  padding: 5px;
+  font-size: 17px;
+  border: 1px solid grey;
+  width: 30%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 15rem;
+}
+
+.search .search-bar .icon-search {
+  background-image: url(../../../assets/SVG/icono_buscar.svg);
+}
+
+.search .search-bar input {
+  width: 90%;
+}
+
+.search .search-bar button {
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.search .search-bar button img {
+  width: 1rem;
+}
+/*# sourceMappingURL=search.component.css.map */

@@ -1,0 +1,152 @@
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url(../../assets/Poppins-Bold.otf);
+}
+
+.card {
+  width: 20rem;
+  background-color: white;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+
+.card .header {
+  background-color: #417ef0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .header .usrname {
+  font-family: 'Poppins-Bold';
+  color: white;
+  word-spacing: 0.2rem;
+  margin-left: 1rem;
+}
+
+.card .header button {
+  width: 2rem;
+  height: 2rem;
+  background-color: #1655cf;
+  border-color: #1655cf;
+  margin-right: 2rem;
+  border-radius: 10px;
+}
+
+.card .header img {
+  width: 100%;
+  background-color: #1655cf;
+}
+
+.card .footer {
+  padding: 1rem;
+}
+
+.card .footer .usr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card .footer .usr img {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  background-color: #ffc823;
+}
+
+.card .footer .usr .usr-info {
+  display: block;
+  margin-left: 1rem;
+}
+
+.modal-header {
+  height: 6rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal-header .close {
+  background: none;
+  color: #417ef0;
+  margin-left: 2rem;
+}
+
+.form-group label {
+  font-size: 0.7rem;
+  font-family: "Poppins-Bold";
+}
+
+.input-group-r {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.input-group-r .rH {
+  margin-right: 2rem;
+}
+
+.input-group-r label {
+  font-size: 0.7rem;
+  font-family: "Poppins-Bold";
+}
+
+.foot {
+  display: block;
+  text-align: center;
+}
+
+.but {
+  width: 10rem;
+  margin-top: 1rem;
+}
+
+.but:last-child {
+  margin-bottom: 2rem;
+}
+
+.input-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  gap: 2rem;
+}
+
+.input-grid .input-group input {
+  border-radius: 1rem;
+  background-color: #eee;
+}
+
+.cancel {
+  color: #417ef0;
+  text-decoration: underline;
+}
+
+.cancel:hover {
+  background-color: #ddd;
+}
+
+.adder {
+  background-color: #417ef0;
+  color: white;
+  font-family: "Poppins-Bold";
+}
+
+.adder:hover {
+  background-color: white;
+  color: #417ef0;
+}
+/*# sourceMappingURL=usr-tag.component.css.map */
